@@ -1,4 +1,8 @@
-let potato = 'notpotato';
-let banana = "banana";
+let colors = ["blue", "red", "green"];
+let items = document.querySelectorAll(".item");
 
-console.log("here's a " + banana + ' ' + potato)
+items.forEach(item => {
+    let getNumber = Math.floor(Math.random() * (colors.length - 1 + 1));
+    item.style.background = colors[getNumber];
+    colors.splice(getNumber, 1);
+})
